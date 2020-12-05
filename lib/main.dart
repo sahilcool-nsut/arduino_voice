@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bluetooth_serial/flutter_bluetooth_serial.dart';
-import 'package:arduino_voice/SelectBonedDevicePage.dart';
-import 'package:arduino_voice/chat_page.dart';
+import 'package:arduino_voice/SelectBondedDevicePage.dart';
+import 'landing_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: FutureBuilder(
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
               ),
             );
           } else {
-            return Home();
+            return LandingPage();
           }
         },
         // child: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -44,27 +44,3 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Home extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        title: Text('Connection'),
-      ),
-      body: SelectBondedDevicePage(
-        onCahtPage: (device1) {
-          BluetoothDevice device = device1;
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return ChatPage(server: device);
-              },
-            ),
-          );
-        },
-      ),
-    ));
-  }
-}

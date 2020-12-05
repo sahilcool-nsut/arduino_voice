@@ -139,10 +139,10 @@ class _ChatPage extends State<ChatPage> {
     return Scaffold(
       appBar: AppBar(
         title: (isConnecting
-            ? Text('Connecting chat to ' + widget.server.name + '...')
+            ? Text('Connecting ' + widget.server.name,style:TextStyle(fontFamily: 'Montserrat'))
             : isConnected
-                ? Text('Live chat with ' + widget.server.name)
-                : Text('Chat log with ' + widget.server.name)),
+                ? Text('Live chat with ' + widget.server.name,style:TextStyle(fontFamily: 'Montserrat'))
+                : Text('Chat log with ' + widget.server.name,style:TextStyle(fontFamily: 'Montserrat'))),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: AvatarGlow(
@@ -169,6 +169,7 @@ class _ChatPage extends State<ChatPage> {
                   fontSize: 32.0,
                   color: Colors.black,
                   fontWeight: FontWeight.w400,
+                  fontFamily: 'Montserrat'
                 ),
               ),
             ),

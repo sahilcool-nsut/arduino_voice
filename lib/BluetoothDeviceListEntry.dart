@@ -12,12 +12,12 @@ class BluetoothDeviceListEntry extends StatelessWidget {
     return ListTile(
       onTap: onTap,
       leading: Icon(Icons.devices),
-      title: Text(device.name ?? "Unknown device"),
+      title: Text(device.name ?? "Unknown device",style: TextStyle(fontFamily: 'Montserrat'),),
       subtitle: Text(device.address.toString()),
       trailing: FlatButton(
-        child: Text('Connect'),
+        child: Text('Connect',style: TextStyle(color:Colors.white,fontFamily: 'Montserrat'),),
         onPressed: onTap,
-        color: Colors.blue,
+        color: Colors.red,
       ),
     );
   }
