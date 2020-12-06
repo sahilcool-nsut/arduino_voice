@@ -285,9 +285,9 @@ class _ChatPage extends State<ChatPage> {
   }
 
   void moveServo() {
-    if (_text.contains('Green')) {
+    if (_text.contains('Green') || _text.contains('green')) {
       _sendMessage('0');
-    } else if (_text.contains('Rainbow')) {
+    } else if (_text.contains('Rainbow') || _text.contains('rainbow')) {
       _sendMessage('1');
     }
   }

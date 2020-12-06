@@ -85,6 +85,7 @@ class _SelectBondedDevicePage extends State<SelectBondedDevicePage> {
           if (_device.device == r.device) {
             _device.availability = _DeviceAvailability.yes;
             _device.rssi = r.rssi;
+            _device.rssi = r.rssi;
           }
         }
       });
