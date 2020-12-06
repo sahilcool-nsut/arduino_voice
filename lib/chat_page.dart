@@ -34,15 +34,15 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
-    'right': HighlightedWord(
-      onTap: () => print('right'),
+    'green': HighlightedWord(
+      onTap: () => print('green'),
       textStyle: const TextStyle(
         color: Colors.green,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'left': HighlightedWord(
-      onTap: () => print('left'),
+    'rainbow': HighlightedWord(
+      onTap: () => print('rainbow'),
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
