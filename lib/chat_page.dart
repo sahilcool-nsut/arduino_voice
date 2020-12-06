@@ -240,7 +240,7 @@ class _ChatPage extends State<ChatPage> {
 
     if (text.length > 0) {
       try {
-        connection.output.add(utf8.encode(text + "\r\n"));
+        connection.output.add(utf8.encode(text));
         await connection.output.allSent;
 
         setState(() {
@@ -285,7 +285,7 @@ class _ChatPage extends State<ChatPage> {
   }
 
   void moveServo() {
-    if (_text.contains('Red')) {
+    if (_text.contains('Green')) {
       _sendMessage('0');
     } else if (_text.contains('Rainbow')) {
       _sendMessage('1');
