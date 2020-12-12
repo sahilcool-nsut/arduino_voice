@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'home_page.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+
 
 class LandingPage extends StatefulWidget {
   static String id = 'home_screen';
@@ -12,8 +14,14 @@ class _LandingPageState extends State<LandingPage> {
   //var firstColor = Color(0xffdecdc3), secondColor = Color(0xffea5455);
   //var firstColor = Color(0xFF07689f),secondColor = Color(0xffa2d5f2);
   var firstColor = Color(0xFFeb8f8f),secondColor = Color(0xFFec0101);
+  var code ;
+
+
+
+
 
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
@@ -51,7 +59,7 @@ class _LandingPageState extends State<LandingPage> {
                     Padding(
                       padding: EdgeInsets.only(top: 10.0,left:10.0),
                       child: Text(
-                          'Lighting for each mood.',
+                          'Lighting for every mood.',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             color: Colors.white,
@@ -75,6 +83,26 @@ class _LandingPageState extends State<LandingPage> {
                         color: Colors.red,
                         child: FlatButton(
                           onPressed: () {
+
+                           // if(assetsAudioPlayer.isPlaying.value) {
+                           //
+                           //     assetsAudioPlayer.stop();
+                           //
+                           //
+                           // }
+                           // else
+                           //   {
+                           //
+                           //     // setState(() {
+                           //     //   assetsAudioPlayer.play();
+                           //     // });
+                           //     assetsAudioPlayer.open(
+                           //       Audio("audio/song0.mp3")
+                           //
+                           //     );
+                           // }
+                                // Audio("audio/song1.mp3")
+
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => Home()),

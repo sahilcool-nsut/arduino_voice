@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'components.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
 
 class ChatPage extends StatefulWidget {
   final BluetoothDevice server;
@@ -27,29 +28,10 @@ class _Message {
 }
 
 class _ChatPage extends State<ChatPage> {
-  final Map<String, HighlightedWord> _highlights = {
-    'flutter': HighlightedWord(
-      onTap: () => print('flutter'),
-      textStyle: const TextStyle(
-        color: Colors.blue,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'green': HighlightedWord(
-      onTap: () => print('green'),
-      textStyle: const TextStyle(
-        color: Colors.green,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'rainbow': HighlightedWord(
-      onTap: () => print('rainbow'),
-      textStyle: const TextStyle(
-        color: Colors.red,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-  };
+  final assetsAudioPlayer = AssetsAudioPlayer();
+
+
+
   stt.SpeechToText _speech;
   bool _isListening = false;
   String _text = 'Press the button and start speaking';
@@ -109,7 +91,7 @@ class _ChatPage extends State<ChatPage> {
 
     super.dispose();
   }
-
+  var code;
   double _value = 90.0;
   @override
   Widget build(BuildContext context) {
@@ -283,6 +265,7 @@ class _ChatPage extends State<ChatPage> {
   }
 
   void _listen() async {
+    assetsAudioPlayer.stop();
     if (!_isListening) {
       bool available = await _speech.initialize(
         onStatus: (val) => print('onStatus: $val'),
@@ -306,11 +289,87 @@ class _ChatPage extends State<ChatPage> {
     }
   }
 
+  final Map<String, HighlightedWord> _highlights = {
+    'flutter': HighlightedWord(
+      onTap: () => print('flutter'),
+      textStyle: const TextStyle(
+        color: Colors.blue,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'off': HighlightedWord(
+      onTap: () => print('off'),
+      textStyle: const TextStyle(
+        color: Colors.grey,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'rainbow': HighlightedWord(
+      onTap: () => print('rainbow'),
+      textStyle: const TextStyle(
+        color: Colors.pink,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'cold': HighlightedWord(
+      onTap: () => print('cold'),
+      textStyle: const TextStyle(
+        color: Colors.blue,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'hot': HighlightedWord(
+      onTap: () => print('hot'),
+      textStyle: const TextStyle(
+        color: Colors.red,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'disco': HighlightedWord(
+      onTap: () => print('disco'),
+      textStyle: const TextStyle(
+        color: Colors.deepPurpleAccent,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  };
+
   void moveServo() {
-    if (_text.contains('Green') || _text.contains('green')) {
-      _sendMessage('0');
-    } else if (_text.contains('Rainbow') || _text.contains('rainbow')) {
-      _sendMessage('1');
+    if (_text.contains('Off') || _text.contains('off')) {
+          // setState(() {
+          //   assetsAudioPlayer.play();
+          // });
+
+          _sendMessage('0');
     }
+    else if (_text.contains('Rainbow') || _text.contains('rainbow')) {
+
+          assetsAudioPlayer.open(
+              Audio("audio/song1.mp3")
+          );
+          _sendMessage('1');
+    }
+    else if (_text.contains('Cold') || _text.contains('cold')) {
+          assetsAudioPlayer.open(
+              Audio("audio/song2.mp3")
+
+          );
+          _sendMessage('2');
+    }
+    else if (_text.contains('Hot') || _text.contains('hot')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song0.mp3")
+      );
+      _sendMessage('3');
+    }
+    else if (_text.contains('Disco') || _text.contains('disco')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song4.mp3")
+      );
+      _sendMessage('4');
+    }
+
   }
 }
