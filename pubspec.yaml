@@ -35,6 +35,7 @@ dependencies:
   avatar_glow: ^1.2.0
 
 dev_dependencies:
+  google_fonts: ^1.1.1
   flutter_test:
     sdk: flutter
 

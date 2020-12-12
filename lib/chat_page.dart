@@ -8,6 +8,7 @@ import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
+import 'components.dart';
 
 class ChatPage extends StatefulWidget {
   final BluetoothDevice server;
@@ -143,6 +144,27 @@ class _ChatPage extends State<ChatPage> {
             : isConnected
                 ? Text('Live chat with ' + widget.server.name,style:TextStyle(fontFamily: 'Montserrat'))
                 : Text('Chat log with ' + widget.server.name,style:TextStyle(fontFamily: 'Montserrat'))),
+            actions: [
+              Padding(padding: EdgeInsets.all(8.0), child: GestureDetector(
+                onTap: () {
+                  showDialog(
+                      context: context,
+                      barrierDismissible: true,
+                      builder: (context) {
+                        return keyOfCodesComponent();
+                      });
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.info_outline,
+                    color: Colors.white,
+                    size: 20,
+                  ),
+                ),
+              ),),
+            ],
+
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: AvatarGlow(
