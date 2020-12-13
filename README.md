@@ -9,7 +9,7 @@ Our prototype focuses on providing a state-of-the-art and progressive ambience s
 <img src="https://cdn.discordapp.com/attachments/781812370896060438/787755071374491698/Screenshot_2020-12-14-00-22-58-764_com.example.arduino_voice.jpg" width="370" height="720">
 <img src="https://cdn.discordapp.com/attachments/781812370896060438/787755070564597791/Screenshot_2020-12-14-00-23-14-479_com.example.arduino_voice.jpg" width="370" height="720">
 <img src="https://cdn.discordapp.com/attachments/781812370896060438/787755070170726463/Screenshot_2020-12-14-00-23-18-039_com.example.arduino_voice.jpg" width="370" height="720">
-<img src="https://cdn.discordapp.com/attachments/781812370896060438/787758029772029973/Screenshot_2020-12-14-00-37-53-898_com.example.arduino_voice.jpg" width="370" height="720">
+<img src="https://cdn.discordapp.com/attachments/781812370896060438/787769456860332042/Screenshot_2020-12-14-01-24-17-856_com.example.arduino_voice.jpg" width="370" height="720">
 
 
 
