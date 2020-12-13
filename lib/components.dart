@@ -24,41 +24,64 @@ final rainbowMode=  GoogleFonts.karla(
   ),
 );
 
-final discoMode=  GoogleFonts.karla(
+final icyCold=  GoogleFonts.karla(
   textStyle: TextStyle(
-    color: Colors.blueAccent,
+    color: Colors.blue,
     fontWeight: FontWeight.w600,
     fontSize: 15.5,
   ),
 );
-final supaFire=  GoogleFonts.karla(
+final comfyWarm=  GoogleFonts.karla(
   textStyle: TextStyle(
     color: Colors.red,
     fontWeight: FontWeight.w600,
     fontSize: 15.5,
   ),
 );
-final chasingMode=  GoogleFonts.karla(
+final discoMode=  GoogleFonts.karla(
   textStyle: TextStyle(
-    color: Colors.lightBlueAccent,
+    color: Colors.deepPurpleAccent,
     fontWeight: FontWeight.w600,
     fontSize: 15.5,
   ),
 );
-final icyCold=  GoogleFonts.karla(
+final shiningTwinkle=  GoogleFonts.karla(
+  textStyle: TextStyle(
+    color: Colors.teal,
+    fontWeight: FontWeight.w600,
+    fontSize: 15.5,
+  ),
+);
+final speedRacing=  GoogleFonts.karla(
+  textStyle: TextStyle(
+    color: Colors.orange,
+    fontWeight: FontWeight.w600,
+    fontSize: 15.5,
+  ),
+);
+
+final sweetSoft=  GoogleFonts.karla(
+  textStyle: TextStyle(
+    color: Colors.pinkAccent,
+    fontWeight: FontWeight.w600,
+    fontSize: 15.5,
+  ),
+);
+final shadyColour=  GoogleFonts.karla(
   textStyle: TextStyle(
     color: Colors.indigo,
     fontWeight: FontWeight.w600,
     fontSize: 15.5,
   ),
 );
-final danceMode=  GoogleFonts.karla(
+final turnOff=  GoogleFonts.karla(
   textStyle: TextStyle(
-    color: Colors.deepPurple,
+    color: Colors.blueGrey,
     fontWeight: FontWeight.w600,
     fontSize: 15.5,
   ),
 );
+
 
 
 class keyOfCodesComponent extends StatelessWidget {
@@ -87,12 +110,16 @@ class keyOfCodesComponent extends StatelessWidget {
                   indent: 10,
                   endIndent: 10,
                 ),
-                NotationText(text: 'Rainbow ', style:rainbowMode,),
-                NotationText(text: 'Disco ', style: discoMode,),
-                NotationText(text: 'Chasing ', style: chasingMode,),
-                NotationText(text: 'Dance With Me ', style: danceMode,),
-                NotationText(text: 'Supa Hot Fire ', style: supaFire,),
+                NotationText(text: 'Shining Rainbow ', style:rainbowMode,),
                 NotationText(text: 'Icy Cold ', style: icyCold,),
+                NotationText(text: 'Comfy Warm ', style: comfyWarm,),
+                NotationText(text: 'Disco Dance ', style: discoMode,),
+                NotationText(text: 'Shining Twinkle ', style: shiningTwinkle,),
+                NotationText(text: 'Speed Racing ', style: speedRacing,),
+                NotationText(text: 'Sweet Soft ', style: sweetSoft,),
+                NotationText(text: 'Shady Colour ', style: shadyColour,),
+                NotationText(text: 'Turn Off ', style: turnOff,),
+
               ],
             ),
           ),
@@ -101,6 +128,8 @@ class keyOfCodesComponent extends StatelessWidget {
     );
   }
 }
+
+
 
 
 class NotationText extends StatelessWidget {

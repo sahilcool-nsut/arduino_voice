@@ -335,7 +335,7 @@ class _ChatPage extends State<ChatPage> {
     'twinkle': HighlightedWord(
       onTap: () => print('twinkle'),
       textStyle: const TextStyle(
-        color: Colors.yellow,
+        color: Colors.teal,
         fontWeight: FontWeight.bold,
       ),
     ),
@@ -346,10 +346,10 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
-    'color': HighlightedWord(
-      onTap: () => print('color'),
+    'colour': HighlightedWord(
+      onTap: () => print('colour'),
       textStyle: const TextStyle(
-        color: Colors.greenAccent,
+        color: Colors.indigo,
         fontWeight: FontWeight.bold,
       ),
     ),
@@ -365,9 +365,7 @@ class _ChatPage extends State<ChatPage> {
 
   void moveServo() {
     if (_text.contains('Off') || _text.contains('off')) {
-          // setState(() {
-          //   assetsAudioPlayer.play();
-          // });
+
 
           _sendMessage('0');
     }
@@ -420,7 +418,7 @@ class _ChatPage extends State<ChatPage> {
       );
       _sendMessage('7');
     }
-    else if (_text.contains('Color') || _text.contains('color')) {
+    else if (_text.contains('Colour') || _text.contains('colour')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song8.mp3")
