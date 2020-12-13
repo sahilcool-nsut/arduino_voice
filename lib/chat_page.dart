@@ -318,8 +318,8 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
-    'hot': HighlightedWord(
-      onTap: () => print('hot'),
+    'warm': HighlightedWord(
+      onTap: () => print('warm'),
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
@@ -332,6 +332,35 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
+    'twinkle': HighlightedWord(
+      onTap: () => print('twinkle'),
+      textStyle: const TextStyle(
+        color: Colors.yellow,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'racing': HighlightedWord(
+      onTap: () => print('racing'),
+      textStyle: const TextStyle(
+        color: Colors.orange,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'color': HighlightedWord(
+      onTap: () => print('color'),
+      textStyle: const TextStyle(
+        color: Colors.greenAccent,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'soft': HighlightedWord(
+      onTap: () => print('soft'),
+      textStyle: const TextStyle(
+        color: Colors.pinkAccent,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+
   };
 
   void moveServo() {
@@ -356,7 +385,7 @@ class _ChatPage extends State<ChatPage> {
           );
           _sendMessage('2');
     }
-    else if (_text.contains('Hot') || _text.contains('hot')) {
+    else if (_text.contains('Warm') || _text.contains('warm')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song0.mp3")
@@ -369,6 +398,34 @@ class _ChatPage extends State<ChatPage> {
           Audio("audio/song4.mp3")
       );
       _sendMessage('4');
+    }
+    else if (_text.contains('Twinkle') || _text.contains('twinkle')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song5.mp3")
+      );
+      _sendMessage('5');
+    }
+    else if (_text.contains('Racing') || _text.contains('racing')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song6.mp3")
+      );
+      _sendMessage('6');
+    }
+    else if (_text.contains('Soft') || _text.contains('soft')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song7.mp3")
+      );
+      _sendMessage('7');
+    }
+    else if (_text.contains('Color') || _text.contains('color')) {
+
+      assetsAudioPlayer.open(
+          Audio("audio/song8.mp3")
+      );
+      _sendMessage('8');
     }
 
   }
