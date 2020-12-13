@@ -1,16 +1,4 @@
 # Crazy_LED_Controller
 
-A new Flutter application.
+Our prototype focuses on providing a state-of-the-art and progressive ambience system to lift up your mood with perfect lighting and music solutions, which can be managed easily using an uncomplicated, yet elegant application installed on your mobiles. No need for conventional wired LED controllers anymore.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
