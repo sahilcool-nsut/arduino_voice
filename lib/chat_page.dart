@@ -41,7 +41,7 @@ class _ChatPage extends State<ChatPage> {
   BluetoothConnection connection;
 
   List<_Message> messages = List<_Message>();
-  String _messageBuffer = '';
+  String _messageBuffer =  '';
 
   final TextEditingController textEditingController =
       new TextEditingController();
