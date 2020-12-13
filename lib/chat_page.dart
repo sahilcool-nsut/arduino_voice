@@ -285,7 +285,7 @@ class _ChatPage extends State<ChatPage> {
     } else {
       setState(() => _isListening = false);
       _speech.stop();
-      moveServo();
+      changeMode();
     }
   }
 
@@ -318,8 +318,8 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
-    'warm': HighlightedWord(
-      onTap: () => print('warm'),
+    'hot': HighlightedWord(
+      onTap: () => print('hot'),
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
@@ -360,65 +360,121 @@ class _ChatPage extends State<ChatPage> {
         fontWeight: FontWeight.bold,
       ),
     ),
+    'shining': HighlightedWord(
+      onTap: () => print('shining'),
+      textStyle: const TextStyle(
+        color: Colors.pink,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'icy': HighlightedWord(
+      onTap: () => print('icy'),
+      textStyle: const TextStyle(
+        color: Colors.blue,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'red': HighlightedWord(
+      onTap: () => print('red'),
+      textStyle: const TextStyle(
+        color: Colors.red,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'dance': HighlightedWord(
+      onTap: () => print('dance'),
+      textStyle: const TextStyle(
+        color: Colors.deepPurpleAccent,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'light': HighlightedWord(
+      onTap: () => print('light'),
+      textStyle: const TextStyle(
+        color: Colors.teal,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'speed': HighlightedWord(
+      onTap: () => print('speed'),
+      textStyle: const TextStyle(
+        color: Colors.orange,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'wave': HighlightedWord(
+      onTap: () => print('wave'),
+      textStyle: const TextStyle(
+        color: Colors.indigo,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+    'sweet': HighlightedWord(
+      onTap: () => print('sweet'),
+      textStyle: const TextStyle(
+        color: Colors.pinkAccent,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
 
   };
 
-  void moveServo() {
+  void changeMode() {
     if (_text.contains('Off') || _text.contains('off')) {
 
 
           _sendMessage('0');
     }
-    else if (_text.contains('Rainbow') || _text.contains('rainbow')) {
+    else if (_text.contains('Rainbow') || _text.contains('rainbow')||_text.contains('Shining') || _text.contains('shining')) {
 
           assetsAudioPlayer.open(
               Audio("audio/song1.mp3")
           );
           _sendMessage('1');
     }
-    else if (_text.contains('Cold') || _text.contains('cold')) {
+    else if (_text.contains('Cold') || _text.contains('cold')||_text.contains('Icy') || _text.contains('icy')) {
           assetsAudioPlayer.open(
               Audio("audio/song2.mp3")
 
           );
           _sendMessage('2');
     }
-    else if (_text.contains('Warm') || _text.contains('warm')) {
+    else if (_text.contains('Red') || _text.contains('red')||_text.contains('Hot') || _text.contains('hot')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song0.mp3")
       );
       _sendMessage('3');
     }
-    else if (_text.contains('Disco') || _text.contains('disco')) {
+    else if (_text.contains('Disco') || _text.contains('disco')||_text.contains('Dance') || _text.contains('dance')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song4.mp3")
       );
       _sendMessage('4');
     }
-    else if (_text.contains('Twinkle') || _text.contains('twinkle')) {
+    else if (_text.contains('Twinkle') || _text.contains('twinkle')||_text.contains('Light') || _text.contains('light')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song5.mp3")
       );
       _sendMessage('5');
     }
-    else if (_text.contains('Racing') || _text.contains('racing')) {
+    else if (_text.contains('Racing') || _text.contains('racing')||_text.contains('Speed') || _text.contains('speed')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song6.mp3")
       );
       _sendMessage('6');
     }
-    else if (_text.contains('Soft') || _text.contains('soft')) {
+    else if (_text.contains('Soft') || _text.contains('soft')||_text.contains('Sweet') || _text.contains('sweet')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song7.mp3")
       );
       _sendMessage('7');
     }
-    else if (_text.contains('Colour') || _text.contains('colour')) {
+    else if (_text.contains('Colour') || _text.contains('colour')||_text.contains('Wave') || _text.contains('wave')) {
 
       assetsAudioPlayer.open(
           Audio("audio/song8.mp3")

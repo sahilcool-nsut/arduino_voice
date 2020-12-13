@@ -45,7 +45,7 @@ final discoMode=  GoogleFonts.karla(
     fontSize: 15.5,
   ),
 );
-final shiningTwinkle=  GoogleFonts.karla(
+final starTwinkle=  GoogleFonts.karla(
   textStyle: TextStyle(
     color: Colors.teal,
     fontWeight: FontWeight.w600,
@@ -67,7 +67,7 @@ final sweetSoft=  GoogleFonts.karla(
     fontSize: 15.5,
   ),
 );
-final shadyColour=  GoogleFonts.karla(
+final colourWave =  GoogleFonts.karla(
   textStyle: TextStyle(
     color: Colors.indigo,
     fontWeight: FontWeight.w600,
@@ -112,12 +112,12 @@ class keyOfCodesComponent extends StatelessWidget {
                 ),
                 NotationText(text: 'Shining Rainbow ', style:rainbowMode,),
                 NotationText(text: 'Icy Cold ', style: icyCold,),
-                NotationText(text: 'Comfy Warm ', style: comfyWarm,),
+                NotationText(text: 'Red Hot ', style: comfyWarm,),
                 NotationText(text: 'Disco Dance ', style: discoMode,),
-                NotationText(text: 'Shining Twinkle ', style: shiningTwinkle,),
+                NotationText(text: 'Light Twinkle ', style: starTwinkle,),
                 NotationText(text: 'Speed Racing ', style: speedRacing,),
                 NotationText(text: 'Sweet Soft ', style: sweetSoft,),
-                NotationText(text: 'Shady Colour ', style: shadyColour,),
+                NotationText(text: 'Colour Wave ', style: colourWave,),
                 NotationText(text: 'Turn Off ', style: turnOff,),
 
               ],
