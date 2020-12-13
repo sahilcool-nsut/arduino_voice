@@ -8,7 +8,7 @@ Our prototype focuses on providing a state-of-the-art and progressive ambience s
 
 [![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755070170726463/Screenshot_2020-12-14-00-23-18-039_com.example.arduino_voice.jpg)]()
 
-[![SS](https://cdn.discordapp.com/attachments/781812370896060438/787758926875459634/img2_1.jpg)]()
+[![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755070564597791/Screenshot_2020-12-14-00-23-14-479_com.example.arduino_voice.jpg)]()
 
 [![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755071374491698/Screenshot_2020-12-14-00-22-58-764_com.example.arduino_voice.jpg)]()
 
