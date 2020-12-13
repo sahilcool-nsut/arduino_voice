@@ -6,7 +6,7 @@ Our prototype focuses on providing a state-of-the-art and progressive ambience s
 ***App Screenshots***
 
 
-[![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755070170726463/Screenshot_2020-12-14-00-23-18-039_com.example.arduino_voice.jpg = 250x250)]()
+[![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755070170726463/Screenshot_2020-12-14-00-23-18-039_com.example.arduino_voice.jpg){:height="700px" width="400px"}]()
 
 [![SS](https://cdn.discordapp.com/attachments/781812370896060438/787755070564597791/Screenshot_2020-12-14-00-23-14-479_com.example.arduino_voice.jpg)]()
 
