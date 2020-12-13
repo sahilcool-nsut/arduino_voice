@@ -96,20 +96,23 @@ class _ChatPage extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     final List<Row> list = messages.map((_message) {
+      if(_message.whom == clientID)
       return Row(
+
         children: <Widget>[
           Container(
             child: Text(
-                (text) {
-                  return text == '/shrug' ? '¯\\_(ツ)_/¯' : text;
-                }(_message.text.trim()),
+                // (text) {
+                //   return text == '/shrug' ? '¯\\_(ツ)_/¯' : text;
+                // }
+                (_message.text.trim()),
                 style: TextStyle(color: Colors.white)),
             padding: EdgeInsets.all(12.0),
             margin: EdgeInsets.only(bottom: 8.0, left: 8.0, right: 8.0),
             width: 222.0,
             decoration: BoxDecoration(
                 color:
-                    _message.whom == clientID ? Colors.blueAccent : Colors.grey,
+                    Colors.blueAccent ,
                 borderRadius: BorderRadius.circular(7.0)),
           ),
         ],
@@ -219,7 +222,8 @@ class _ChatPage extends State<ChatPage> {
     int index = buffer.indexOf(13);
     if (~index != 0) {
       setState(() {
-        messages.add(
+        messages
+            .add(
           _Message(
             1,
             backspacesCounter > 0
@@ -295,6 +299,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
+        fontSize: 32.0
       ),
     ),
     'off': HighlightedWord(
@@ -302,6 +307,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.grey,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'rainbow': HighlightedWord(
@@ -309,6 +315,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.pink,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'cold': HighlightedWord(
@@ -316,6 +323,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'hot': HighlightedWord(
@@ -323,6 +331,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'disco': HighlightedWord(
@@ -330,6 +339,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.deepPurpleAccent,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'twinkle': HighlightedWord(
@@ -337,6 +347,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.teal,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'racing': HighlightedWord(
@@ -344,6 +355,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.orange,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'colour': HighlightedWord(
@@ -351,6 +363,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.indigo,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'soft': HighlightedWord(
@@ -358,6 +371,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.pinkAccent,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'shining': HighlightedWord(
@@ -365,6 +379,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.pink,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'icy': HighlightedWord(
@@ -372,6 +387,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.blue,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'red': HighlightedWord(
@@ -379,6 +395,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.red,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'dance': HighlightedWord(
@@ -386,6 +403,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.deepPurpleAccent,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'light': HighlightedWord(
@@ -393,6 +411,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.teal,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'speed': HighlightedWord(
@@ -400,6 +419,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.orange,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'wave': HighlightedWord(
@@ -407,6 +427,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.indigo,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
     'sweet': HighlightedWord(
@@ -414,6 +435,7 @@ class _ChatPage extends State<ChatPage> {
       textStyle: const TextStyle(
         color: Colors.pinkAccent,
         fontWeight: FontWeight.bold,
+          fontSize: 32.0
       ),
     ),
 
