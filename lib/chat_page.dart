@@ -75,7 +75,7 @@ class _ChatPage extends State<ChatPage> {
         }
       });
     }).catchError((error) {
-      print('Cannot connect, exception occured');
+      print('Cannot connect, exception occurred');
       print(error);
     });
   }
