@@ -11,8 +11,7 @@ class LandingPage extends StatefulWidget {
 
 class _LandingPageState extends State<LandingPage> {
 
-  //var firstColor = Color(0xffdecdc3), secondColor = Color(0xffea5455);
-  //var firstColor = Color(0xFF07689f),secondColor = Color(0xffa2d5f2);
+
   var firstColor = Color(0xFFeb8f8f),secondColor = Color(0xFFec0101);
   var code ;
 
@@ -83,25 +82,6 @@ class _LandingPageState extends State<LandingPage> {
                         color: Colors.red,
                         child: FlatButton(
                           onPressed: () {
-
-                           // if(assetsAudioPlayer.isPlaying.value) {
-                           //
-                           //     assetsAudioPlayer.stop();
-                           //
-                           //
-                           // }
-                           // else
-                           //   {
-                           //
-                           //     // setState(() {
-                           //     //   assetsAudioPlayer.play();
-                           //     // });
-                           //     assetsAudioPlayer.open(
-                           //       Audio("audio/song0.mp3")
-                           //
-                           //     );
-                           // }
-                                // Audio("audio/song1.mp3")
 
                             Navigator.push(
                               context,
